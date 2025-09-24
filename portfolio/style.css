@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: Sacramento;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat;
+}
+
+p {
+  font-family: sans-serif;
+}
+
+#main {
+  color: teal;
+  background: linear-gradient(45deg, rgb(240, 247, 247), rgb(251, 236, 215));
+  text-align: center;
+  position: relative;
+}
+
+#main .cloud {
+  /* x , y, b , c */
+  filter: drop-shadow(-5px 5px 0 grey);
+}
+#main .c1 {
+  position: relative;
+  top: 100px;
+  right: 200px;
+  width: 300px;
+}
+#main .c2 {
+  position: relative;
+  width: 250px;
+  top: 50px;
+  left: 200px;
+}
+#main .c3 {
+  position: absolute;
+  bottom: 250px;
+  right: 420px;
+  filter: drop-shadow(-2px 2px 0 grey);
+  width: 170px;
+}
+#main .c4 {
+  width: 220px;
+  position: absolute;
+  top: 50px;
+  left: 500px;
+}
+
+#main .mountain {
+  filter: drop-shadow(-2px 2px 0 grey);
+
+  position: relative;
+  z-index: 2;
+}
+
+#main h1 {
+  font-style: italic;
+  /* 1rem = 16px */
+  font-size: 5rem;
+}
+#main h2 {
+  /* 1rem = 16px */
+  font-size: 2rem;
+  font-weight: 400;
+}

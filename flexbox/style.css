@@ -1,0 +1,40 @@
+* {
+  margin: 0; /* Sets the margin to 0 for all elements, removing default browser margins */
+  padding: 0; /* Sets the padding to 0 for all elements, removing default browser padding */
+}
+
+#parent {
+  background-color: grey; /* Sets the background color of the element with id="parent" to grey */
+  height: 400px; /* Sets the height of the parent element to 400 pixels */
+  padding: 2rem; /* Adds 2rem of padding (space inside the element's borders) on all sides */
+  display: flex; /* Enables flexbox layout for the parent element, making its children flex items */
+  /* control direction of flex */
+  flex-direction: row; /* Arranges flex items in a row (horizontally, left to right) */
+  /* manage horizontal space */
+  justify-content: space-evenly; /* Distributes flex items horizontally with equal space between and around them */
+  /* manage vertical space */
+  align-items: center; /* Aligns flex items vertically in the center of the parent container */
+  /*  */
+  flex-wrap: wrap; /* Allows flex items to wrap to the next line if they exceed the container's width */
+}
+
+div {
+  border: 1px solid #333; /* Applies a 1-pixel wide, solid border with a dark grey color (#333) to all div elements */
+}
+
+.box {
+  background-color: white; /* Sets the background color of elements with class="box" to white */
+  width: 1000px; /* Sets the width of elements with class="box" to 1000 pixels */
+}
+
+.b1 {
+  height: 100px; /* Sets the height of elements with class="b1" to 100 pixels */
+}
+
+.b2 {
+  height: 150px; /* Sets the height of elements with class="b2" to 150 pixels */
+}
+
+.b3 {
+  height: 200px; /* Sets the height of elements with class="b3" to 200 pixels */
+}

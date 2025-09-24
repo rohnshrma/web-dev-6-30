@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  padding: 0; /* Removes default padding for all elements to ensure a clean starting point */
+  margin: 0; /* Removes default margins for all elements to ensure a clean starting point */
+}
+
+body {
+  font-family: sans-serif;
+}
+p {
+  font-family: sans-serif;
+  color: grey;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Montserrat, Arial, Helvetica, sans-serif; /* Sets the font stack for all heading elements, prioritizing Montserrat, then falling back to Arial or Helvetica */
+  margin-bottom: 1rem; /* Adds a 1rem margin below all heading elements for consistent spacing */
+}
+
+.btn {
+  border: none;
+  padding: 12px 14px;
+  border-color: transparent;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  border-style: solid;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: #fff;
+}
+.btn-dark:hover {
+  background-color: black;
+}
+.btn-outline-dark {
+  background-color: transparent;
+  color: #333;
+  border-color: #333;
+}
+.btn-outline-dark:hover {
+  background-color: black;
+  color: #fff;
+}
+.btn-light {
+  background-color: whitesmoke;
+  color: #333;
+}
+.btn-light:hover {
+  background-color: #fff;
+}
+
+.level-2 {
+  font-size: 3rem; /* Sets the font size to 3rem for elements with class="level-2" */
+  color: tomato; /* Sets the text color to tomato (a shade of red) */
+  text-shadow: -2px 0 0 grey; /* Adds a grey text shadow, offset 2px to the left, with no vertical offset or blur */
+}
+
+.level-3 {
+  font-size: 1.6rem; /* Sets the font size to 2rem for elements with class="level-3" */
+  color: steelblue; /* Sets the text color to steelblue (a shade of blue) */
+  text-shadow: -2px 0 0 grey; /* Adds a grey text shadow, offset 2px to the left, with no vertical offset or blur */
+}
+
+.wrapper {
+  text-align: center; /* Centers the text content of elements with class="wrapper" */
+  padding: 4rem 8rem; /* Adds 4rem padding to top/bottom and 8rem to left/right for elements with class="wrapper" */
+}
+
+/* header */
+#header {
+  color: #fff;
+  overflow: hidden;
+  height: 90vh;
+  padding: 4rem 8rem 0;
+  background: tomato;
+}
+#header #nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#header #nav a {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+#header #nav .logo {
+  font-size: 2.5rem;
+  font-family: Ubuntu, Montserrat, Arial, Helvetica, sans-serif;
+}
+
+#header #nav ul {
+  display: flex;
+  list-style-type: none;
+}
+#header #nav ul li {
+  margin-left: 2rem;
+  font-size: 1.2rem;
+}
+#header #main {
+  margin-top: 8rem;
+  display: flex;
+}
+#header #main .img-bx {
+  width: 50%;
+}
+#header #main .img-bx img {
+  position: relative;
+  left: 100px;
+  transform: rotate(25deg);
+  filter: drop-shadow(-4px 4px 4px black);
+  width: 60%;
+}
+#header #main .content-bx {
+  width: 50%;
+}
+#header #main .content-bx .btn {
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+}
+#header #main .content-bx h1 {
+  font-size: 4rem;
+}
+/* features */
+
+#features .row {
+  margin-top: 2rem; /* Adds a 2rem margin above elements with class="row" inside the element with id="features" */
+  display: flex; /* Enables flexbox layout for the row, making its children flex items */
+  justify-content: space-between; /* Distributes flex items horizontally with equal space between them */
+}
+
+#features .row .col {
+  border-radius: 10px; /* Rounds the corners of elements with class="col" inside the row with a 10px radius */
+  width: 30%; /* Sets the width of each column to 30% of its parent container */
+  padding: 1rem 2rem; /* Adds 1rem padding to top/bottom and 2rem to left/right for each column */
+}
+
+#features .row .col i {
+  font-size: 4rem; /* Sets the font size to 4rem for <i> elements (likely icons) inside columns */
+  color: steelblue; /* Sets the color of icons to steelblue */
+  margin-bottom: 1rem; /* Adds a 1rem margin below icons for spacing */
+}
+
+#features .row .col:hover {
+  box-shadow: 0 0 4px 0 grey; /* Applies a grey box shadow (4px blur, no spread) to columns on hover for a subtle effect */
+}
+
+#features .row .col:hover i {
+  color: tomato; /* Changes the icon color to tomato on hover */
+  transition: 0.3s ease-in-out; /* Smoothly transitions color, transform, and other properties over 0.3 seconds with an ease-in-out timing function */
+  transform: scale(1.1) rotate(-10deg); /* Scales the icon to 1.1x its size and rotates it 10 degrees counterclockwise on hover */
+}
+
+#features .row .col:hover h3 {
+  color: tomato; /* Changes the color of <h3> elements inside columns to tomato on hover */
+  transition: 0.3s ease-in-out; /* Smoothly transitions the color change over 0.3 seconds with an ease-in-out timing function */
+}
+
+#reviews {
+  color: #fff;
+  background-color: tomato;
+}
+#reviews .level-2 {
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+#reviews .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reviews img {
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin-right: 1rem;
+}
+#brands {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: tomato;
+}
+#brands img {
+  width: 20%;
+}
+
+/* pricing */
+#pricing {
+  background: #f8f7f7;
+}
+
+#pricing .row {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+#pricing .row .col {
+  width: 25%;
+}
+#pricing .row .col .card {
+  overflow: hidden;
+  border: 0.5px solid #ccc;
+  border-radius: 10px;
+}
+#pricing .row .col .card .card-header {
+  padding: 1rem;
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  background-color: #ebebeb;
+  border-bottom: 0.5px solid #ccc;
+}
+#pricing .row .col .card .card-body {
+  background-color: #fff;
+  padding: 1rem;
+}
+#pricing .row .col .card .card-body button {
+  width: 100%;
+}
+#pricing .row .col .card .card-body .price {
+  font-size: 2rem;
+  font-weight: 600;
+}
+#pricing .row .col .card .card-body p {
+  margin-bottom: 1rem;
+}
+
+#download {
+  background-color: tomato;
+}
+#download .level-2 {
+  color: #fff;
+}
+
+footer a {
+  color: #333;
+  font-size: 1.6rem;
+  margin: 0.5rem;
+}
+footer a:hover i {
+  color: tomato;
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+footer p {
+  margin-top: 2rem;
+}
+
+/* media queries */
+
+/* 0-768 */
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 2rem;
+  }
+
+  #header {
+    height: auto;
+    text-align: center;
+    padding: 2rem;
+  }
+  #header #nav {
+    justify-content: space-evenly;
+  }
+  #header #nav ul {
+    display: none;
+  }
+  #header #main {
+    margin-top: 2rem;
+    flex-direction: column;
+  }
+  #header #main .content-bx {
+    width: 100%;
+  }
+  #header #main .content-bx .btn {
+    margin: 0;
+    margin: 1rem 0.5rem;
+  }
+  #header #main .img-bx {
+    width: 100%;
+    margin-top: 2rem;
+  }
+  #header #main .img-bx img {
+    position: static;
+    transform: rotate(0);
+  }
+
+  #features .row {
+    flex-direction: column;
+  }
+  #features .row .col {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  #features .row .col .card {
+    padding: 1rem;
+  }
+
+  #pricing .row {
+    flex-direction: column;
+  }
+  #pricing .row .col {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  #pricing .row .col:last-child {
+    margin: 0;
+  }
+
+  #brands {
+    flex-direction: column;
+  }
+  #brands img {
+    margin-bottom: 2rem;
+    width: 80%;
+  }
+}
