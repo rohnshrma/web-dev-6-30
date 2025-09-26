@@ -372,3 +372,82 @@ var lifeSpan = (average_age, ageFn) => {
 // Use an anonymous function to return a cost based on event type (e.g., "wedding" returns 5000).
 // Use an arrow function in a function `eventSummary` to log the remaining budget with a message.
 // Test with different budgets and event types.
+
+// ========================= arrow function syntax 2 and 3
+
+//  in case of exact 1 parameter , () can be ommited
+//  if all your function does is return something , return and {} can be omitted
+
+var checkPalindrome = (txt) =>
+  txt.split("").reverse().join("") === txt ? "Palindrome" : "Not A Palindrome";
+
+// var checkPalindrome = (txt) => {
+//   var rev = "";
+//   for (var i = txt.length - 1; i >= 0; i -= 1) {
+//     rev += txt[i];
+//   }
+//   if (rev === txt) {
+//     return "Palindrome";
+//   } else {
+//     return "Not a Palindrome";
+//   }
+// };
+
+var res = checkPalindrome("poop");
+console.log(res);
+
+// 10
+var power = (base, exponent) => base ** exponent;
+
+var logInfo = (cb, base, exponent) => {
+  console.log(cb(base, exponent));
+};
+
+logInfo(power, 12, 2);
+
+// Task 10: Anonymous Function
+// Assign an anonymous function to `power` that takes a base and exponent, returning base^exponent.
+// Use it in a function `logPower` as a callback to log the result.
+// Test with different base and exponent values.****
+
+var power = function (base, exponent) {
+  return base ** exponent;
+};
+function logPower(base, exponent, callback) {
+  var result = callback(base, exponent);
+  console.log(result);
+}
+logPower(2, 3, power);
+
+// Task 11: Arrow Function
+// Create an arrow function `filterEvens` that takes an array and returns only even numbers using filter.
+// Use it in a function `displayEvens` as a callback to log the filtered array.
+// Test with arrays containing mixed numbers.
+
+const filterEvens = (nums) => {
+  var evens = [];
+  for (var i = 0; i < nums.length; i += 1) {
+    if (nums[i] % 2 === 0) {
+      evens.push(nums[i]);
+    }
+  }
+  return evens;
+};
+
+// Task 12: Callback Function
+// Write a function `calcLoanPayment` that takes `principal` and a callback for interest rate,
+// returning monthly payment (principal * rate / 12).
+// Use an anonymous function to return an interest rate of 5%.
+// Log the result for different principal amounts.
+const calcLoanPayment = (principal, cb) => {
+  var rate = cb();
+  return `your monthly  payment will be ${
+    (principal * rate) / 100 / 12 + principal / 12
+  } `;
+};
+
+var res = calcLoanPayment(10000, function () {
+  return parseInt(prompt("Enter intrest rate"));
+});
+
+console.log(res);
