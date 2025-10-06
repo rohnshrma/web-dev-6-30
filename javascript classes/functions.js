@@ -344,8 +344,43 @@ var lifeSpan = (average_age, ageFn) => {
 
 // Task 15: Arrow Function
 // Write an arrow function `averageGrades` that takes an array of grades and returns their average.
-// Use it in a function `gradeReport` as a callback to log the average with a pass/fail message (pass if average >= 60).
+// Use it in a function `gradeReport` as a callback to log the average with a pass/fail message
+// (pass if average >= 60).
 // Test with different grade arrays.
+
+// var averageGrades = (grades) => {
+//   var sum = 0;
+//   for (var i = 0; i < grades.length; i++) {
+//     sum += grades[i];
+//   }
+//   return sum / grades.length;
+// };
+
+// var gradeReport = (cb, grades) => {
+//   var average = cb(grades);
+//   if (average >= 60) {
+//     return "Pass";
+//   } else {
+//     return "Fail";
+//   }
+// };
+
+// gradeReport(averageGrades, [67, 89, 67, 56, 34, 78]);
+
+// app : 2
+
+var gradeReport = (cb, grades) => (cb(grades) >= 60 ? "Pass" : "Fail");
+
+gradeReport(
+  (grades) => {
+    var sum = 0;
+    for (var i = 0; i < grades.length; i++) {
+      sum += grades[i];
+    }
+    return sum / grades.length;
+  },
+  [67, 89, 67, 56, 34, 78]
+);
 
 // Task 16: Callback Function
 // Create a function `estimateSavings` that takes `monthlyDeposit` and a callback for years, returning total savings (deposit * years * 12).
