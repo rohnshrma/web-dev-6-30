@@ -173,3 +173,42 @@ var numbers = [3, 4, 6, 7, 9, 12];
 
 // Task 20: Use a for loop to create an array of numbers divisible by 3 (same as Task 19).
 // Your code here:
+
+for (var i = 0; i < marks.length; i += 1) {
+  console.log(marks[i]);
+}
+
+marks.forEach((m) => console.log(m));
+
+var names = ["alice", "bob", "cherry"];
+var res = names.filter((name) => name.length > 3);
+console.log(res);
+
+var upper = names.map((name) => name.toUpperCase());
+console.log(upper);
+
+// Task 15: Use filter to get all positive numbers from an array of mixed numbers.
+var numbers = [-2, 5, -10, 8, 0, 12];
+// Your code here:
+
+var positives = numbers.filter((n) => n > 0);
+console.log(positives);
+
+// // Task 16: Use map to create an array of objects from an array of numbers, each object having a 'value' property.
+// var numbers = [1, 2, 3];
+// // Your code here:
+
+// Task 3: Use map to create a new array with each number doubled.
+var numbers = [1, 2, 3, 4, 5];
+// Your code here:
+var double = numbers.map((m) => m * 2);
+console.log(double);
+
+// Task 4: Use a for loop to create a new array with each number doubled (same as Task 3).
+// Your code here:
+
+var double = [];
+for (var i = 0; i < numbers.length; i += 1) {
+  double.push(numbers[i] * 2);
+}
+console.log(double);
