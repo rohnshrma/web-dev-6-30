@@ -2,7 +2,7 @@
 // a reference data type used to store mulitiple values of similar or different data types
 // [ ] are used to create an array , where values are seperated using ","
 
-var marks = [23, 2, 32, 3, 4, 223, 2, 32];
+var marks = [23, 2, 2, 2, 32, 3, 4, 223, 2, 32];
 console.log(marks[0]);
 console.log(marks[1]);
 console.log(marks[2]);
@@ -212,3 +212,109 @@ for (var i = 0; i < numbers.length; i += 1) {
   double.push(numbers[i] * 2);
 }
 console.log(double);
+
+// reduce
+
+// case 1 : value of acc is not explicitly specified
+
+// acc = marks[0] ( 23)
+// cv = marks[1] (2)
+
+var total = marks.reduce((acc, cv) => {
+  // acc += cv
+  // console.log(acc, cv);
+  return acc + cv;
+});
+
+console.log(total);
+
+// without reduce
+
+// var sum = 0;
+
+// marks.forEach((m) => {
+//   sum += m;
+// });
+// console.log(sum);
+
+// finding max value
+// var max = marks[0];
+
+// marks.forEach((cv) => {
+//   if (cv > max) {
+//     max = cv;
+//   }
+// });
+
+// console.log("max =>", max);
+
+// case 2 :
+// when value of acc is explicitly specified
+
+// max = value provided (23)
+// cv = marks[0] (23)
+
+var max = marks.reduce((max, cv) => {
+  if (cv > max) {
+    // max = cv
+    return cv;
+  } else {
+    // max = max
+    return max;
+  }
+}, marks[0]);
+
+console.log(max);
+
+var min = marks.reduce((min, cv) => {
+  if (cv < min) {
+    // max = cv
+    return cv;
+  } else {
+    // max = max
+    return min;
+  }
+}, marks[0]);
+
+console.log(min);
+
+// sort
+marks.sort((a, b) => {
+  return a - b; // ascending
+});
+
+console.log(marks);
+
+marks.sort((a, b) => {
+  return b - a; // descending
+});
+
+console.log(marks);
+
+var words = ["hello", "world", "my", "name", "john", "doe"];
+var sentence = words.reduce((acc, cv) => acc + " " + cv);
+console.log(sentence.trim());
+
+// Task 3: Use reduce to count the occurrences of a specific number in an array.
+
+console.log(marks);
+
+var count_of_2 = marks.reduce((count, cv) => {
+  if (cv === 2) {
+    return (count += 1);
+  }
+  return count;
+}, 0);
+console.log(count_of_2);
+
+// Tasks based on the concepts (reduce and sort):
+// Task 1: Use reduce to calculate the product of all numbers in an array.
+// Task 2: Use reduce to concatenate all strings in an array of strings into a single string.
+// Task 3: Use reduce to count the occurrences of a specific number in an array.
+// Task 4: Use reduce to find the second largest number in an array.
+// Task 5: Use sort to arrange an array of strings in alphabetical order (case-insensitive).
+// Task 6: Use reduce to create an object that groups array elements by their frequency.
+// Task 7: Use sort to order an array of objects by a specific property (e.g., age or name).
+// Task 8: Use reduce to compute the average of numbers in an array.
+// Task 9: Use sort to arrange an array of numbers based on their absolute difference from a given target number.
+// Task 10: Use reduce to find the longest string in an array of strings.
