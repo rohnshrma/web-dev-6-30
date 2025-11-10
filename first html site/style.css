@@ -1,0 +1,158 @@
+/* The universal selector (*) applies styles to ALL elements on the page */
+* {
+  /* margin: 0; removes the default outer spacing around all elements */
+  margin: 0;
+  /* padding: 0; removes the default inner spacing inside all elements */
+  padding: 0;
+}
+
+/* Targets the element with the ID 'header' (e.g., <div id="header">) */
+#header {
+  /* Centers the text horizontally inside the header */
+  text-align: center;
+  /* Sets the text color to white */
+  color: white;
+
+  /* This is a commented-out style; it would draw a red line through the text if uncommented */
+  /* text-decoration: line-through red; */
+
+  /* These are commented-out examples of setting a single background color */
+  /* background-color: orangered; */
+  /* background: orangered; */ /* Shorthand for the same */
+
+  /* These are commented-out examples of linear gradients (smooth color transitions) */
+  /* background: linear-gradient(tan, teal); */ /* Gradient from tan to teal */
+  /* background: linear-gradient(tan, teal, tomato); */ /* Gradient with three colors */
+  /* background: linear-gradient(-45deg, tan, teal); */ /* Gradient at a 45-degree angle */
+  /* background: linear-gradient(-45deg, tan 70%, teal 30%); */ /* Gradient with specific color stops */
+
+  /* These are commented-out examples of setting a background image */
+  /* background: url(./images/bg.jpeg); */ /* Local image */
+  /* background-image: ur[](https://images.pexels.com/photos/28450914/pexels-photo-28450914.jpeg); */ /* Online image */
+
+  /* Combines a linear gradient (semi-transparent black overlay) with a background image */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
+    url(https://images.pexels.com/photos/28450914/pexels-photo-28450914.jpeg);
+  /* Prevents the background image from repeating (tiling) */
+  background-repeat: no-repeat;
+  /* Scales the background image to cover the entire element, even if it crops parts */
+  background-size: cover;
+  /* Centers the background image horizontally and vertically */
+  background-position: center;
+  /* Keeps the background image fixed in place when scrolling */
+  background-attachment: fixed;
+
+  /* Padding is the inner spacing between the element's content and its border */
+  /* These are commented-out examples of setting padding individually */
+  /* padding-top: 23px; */ /* Top padding */
+  /* padding-right: 23px; */ /* Right padding */
+  /* padding-bottom: 23px; */ /* Bottom padding */
+  /* padding-left: 23px; */ /* Left padding */
+
+  /* This is a commented-out shorthand: sets 68px padding on all sides */
+  /* padding: 68px; */
+
+  /* Shorthand: 68px for top and bottom, 128px for left and right */
+  padding: 68px 128px;
+
+  /* These are commented-out padding shorthands */
+  /* padding: 68px 128px 100px; */ /* Top, left-right, bottom */
+  /* padding: 68px 128px 100px 123px; */ /* Top, right, bottom, left */
+
+  /* Margin is the outer spacing outside the element's border */
+  /* These are commented-out examples of setting margin individually */
+  /* margin-top: 23px; */ /* Top margin */
+  /* margin-right: 23px; */ /* Right margin */
+  /* margin-bottom: 23px; */ /* Bottom margin */
+  /* margin-left: 23px; */ /* Left margin */
+
+  /* This is a commented-out shorthand: sets 68px margin on all sides */
+  /* margin: 68px; */
+
+  /* Shorthand: 68px for top and bottom, 128px for left and right */
+  margin: 68px 128px;
+
+  /* These are commented-out margin shorthands */
+  /* margin: 68px 128px 100px; */ /* Top, left-right, bottom */
+  /* margin: 68px 128px 100px 123px; */ /* Top, right, bottom, left */
+
+  /* These are commented-out border properties */
+  /* border-width: 10px; */ /* Sets border thickness */
+  /* border-color: red; */ /* Sets border color */
+  /* border-style: solid; */ /* Sets border style (e.g., solid, dotted) */
+
+  /* This is a commented-out border shorthand: 10px thick, dotted, green */
+  /* border: 10px dotted green; */
+
+  /* These are commented-out examples of styling individual borders */
+  /* border-top: 10px dotted green; */ /* Top border */
+  /* border-left: 10px inset green; */ /* Left border */
+  /* border-right: 10px double green; */ /* Right border */
+  /* border-bottom: 10px dashed green; */ /* Bottom border */
+
+  /* Rounds the corners of the element by 10 pixels */
+  border-radius: 10px;
+
+  /* This is a commented-out box shadow: x-offset, y-offset, blur, color */
+  /* box-shadow: -4px 4px 4px Red; */
+  /* Adds a shadow around the element: no offset, 10px blur, black color */
+  box-shadow: 0 0 10px black;
+}
+
+/* Targets all <h1> elements */
+h1 {
+  /* Sets the font size to 40 pixels */
+  font-size: 40px;
+  /* Sets the text color to white */
+  color: white;
+  /* Makes the text very bold (900 is the maximum boldness) */
+  font-weight: 900;
+  /* Sets the font to Arial (a common sans-serif font) */
+  font-family: Arial;
+  /* Adds 2 pixels of space between letters */
+  letter-spacing: 2px;
+  /* Adds a text shadow: 2px left, 2px down, no blur, black color */
+  text-shadow: -2px 2px 0 #000;
+  /* Makes the text italicized */
+  font-style: italic;
+}
+
+/* Targets all <p> (paragraph) elements */
+p {
+  /* Sets the spacing between lines to 1.18 times the normal height */
+  line-height: 1.18;
+  /* Justifies the text, spreading it evenly between left and right margins */
+  text-align: justify;
+}
+
+/* Targets <img> elements inside the element with ID 'header' */
+#header img {
+  /* Sets the image width to 150 pixels */
+  width: 150px;
+  /* Rounds the image corners to make it circular (50% creates a circle) */
+  border-radius: 50%;
+  /* Sets the image height to 150 pixels (ensures a square image) */
+  height: 150px;
+}
+
+/* Targets the element with the ID 'btn' (e.g., a button or link) */
+#btn {
+  /* Rounds the corners of the button by 4 pixels */
+  border-radius: 4px;
+  /* Sets padding: 10px top and bottom, 20px left and right */
+  padding: 10px 20px;
+  /* Sets the font size to 50 pixels (large text) */
+  font-size: 50px;
+  /* Sets the background color to teal */
+  background-color: teal;
+  /* Sets the text color to white */
+  color: white;
+  /* Removes underlines from the text (useful for links) */
+  text-decoration: none;
+  /* Makes the element a block-level element, taking full width */
+  display: block;
+  /* Centers the button horizontally with 16px margin top and bottom */
+  margin: 16px auto;
+  /* Sets the button's width to 100 pixels */
+  width: 100px;
+}

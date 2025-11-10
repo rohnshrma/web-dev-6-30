@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <!-- headings -->
+    <h1>hello world</h1>
+    <h2>hello world</h2>
+    <h3>hello world</h3>
+    <h4>hello world</h4>
+    <h5>hello world</h5>
+    <h6>hello world</h6>
+
+    <!-- paragraph -->
+    <p>this is my dummy text</p>
+
+    <!-- list : ordered, unordered, descriptive -->
+
+    <ol reversed type="A">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+    </ol>
+
+    <ul type="square">
+      <li>Apple</li>
+      <li>Banana</li>
+      <li>Cherry</li>
+    </ul>
+
+    <table border="1">
+      <tr>
+        <th colspan="3">Student Data</th>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+      </tr>
+      <tr>
+        <td>Lokesh</td>
+        <td>21</td>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <td>Rihan</td>
+        <td>34</td>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <td>Shivani</td>
+        <td>36</td>
+        <td>Female</td>
+      </tr>
+    </table>
+
+    <table border="1">
+      <tr>
+        <th colspan="2">Lokesh</th>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <td>Lokesh</td>
+      </tr>
+      <tr>
+        <th>Age</th>
+        <td>21</td>
+      </tr>
+      <tr>
+        <th>Gender</th>
+        <td>Male</td>
+      </tr>
+      <tr>
+        <th rowspan="2">Details</th>
+        <td>8765456776</td>
+      </tr>
+      <tr>
+        <td>lokesh@email.com</td>
+      </tr>
+    </table>
+
+    <!-- block level -->
+    <!-- 1. starts on a new line -->
+    <!-- 2. takes full width -->
+    <!-- 3. doesn't allow any other element to sit beside -->
+    <!-- 4. may have predefined margin(outer spacing) or padding(inner space) -->
+    <!-- h1-h6 , p , div ... -->
+
+    <h2>i'm a block level element</h2>
+    <h2>i'm a block level element</h2>
+
+    <ul>
+      <li>Apple</li>
+      <li>Apple</li>
+      <li>Apple</li>
+      <li>Apple</li>
+    </ul>
+
+    <!-- Inline elements -->
+    <!-- 1. Do NOT start on a new line -->
+    <!-- 2. Take only the space their content needs (width depends on content) -->
+    <!-- 3. Allow other elements to sit beside them on the same line (inline only)-->
+    <!-- 4. Can have padding and margin, but vertical margins/paddings 
+     usually don’t affect layout like block elements -->
+
+    <!-- Example: span and a are inline elements -->
+
+    <p>
+      This is a
+      <span style="height: 200px; width: 200px; background-color: yellow"
+        >simple inline element</span
+      >
+      inside a paragraph.
+      <!-- <p> is block level but <span> inside is inline -->
+      Here is a <a href="#">link</a> next to text.
+    </p>
+
+    <!-- Inline-block elements -->
+    <!-- 1. Do NOT start on a new line automatically -->
+    <!-- 2. Take only the width and height you assign or the content needs -->
+    <!-- 3. Allow other elements to sit beside them on the same line (like inline) -->
+    <!-- 4. Can accept width and height CSS properties (unlike inline elements) -->
+    <!-- 5. Vertical padding, margin, and borders work as expected -->
+
+    <!-- Example usage of inline-block -->
+    <p>
+      This is an
+      <button style="width: 150px; height: 50px; background: lightblue">
+        inline-block button
+      </button>
+      inside a paragraph. It sits inline but can have size.
+    </p>
+  </body>
+</html>

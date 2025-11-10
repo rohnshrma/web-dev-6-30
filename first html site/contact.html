@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Contact Page</title>
+  </head>
+  <body>
+    <div id="navigation">
+      <h2>Webigeeks</h2>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <hr />
+
+    <div id="contact">
+      <form
+        action="mailto:rohn11shrma@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <div>
+          <label for="fname">Full Name : </label>
+          <input
+            id="fname"
+            required
+            name="first_name"
+            type="text"
+            placeholder="Enter your name..."
+          />
+        </div>
+
+        <div>
+          <label for="mail">Email Address</label>
+          <input
+            type="email"
+            required
+            name="email_address"
+            id="mail"
+            placeholder="Enter your email..."
+          />
+        </div>
+        <div>
+          <label for="pass">Password</label>
+          <input
+            type="password"
+            id="pass"
+            name="password"
+            required
+            placeholder="Enter your password..."
+          />
+        </div>
+
+        <div>
+          Gender :
+
+          <label>
+            <input type="radio" name="gender" value="male" />
+            Male
+          </label>
+          <label>
+            <input type="radio" name="gender" value="female" />
+            Female
+          </label>
+          <label>
+            <input type="radio" name="gender" value="others" />
+            Others
+          </label>
+        </div>
+
+        <div>
+          Skills :
+
+          <label>
+            <input checked type="checkbox" name="skills" value="html" />
+            HTML
+          </label>
+          <label>
+            <input type="checkbox" name="skills" value="css" />
+            CSS
+          </label>
+          <label>
+            <input type="checkbox" name="skills" value="js" />
+            JS
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Comments :
+            <br />
+            <textarea
+              name="comments"
+              cols="30"
+              rows="10"
+              placeholder="Enter your comments"
+            ></textarea>
+          </label>
+        </div>
+
+        <div>
+          <label>
+            Country :
+            <select name="country">
+              <option selected disabled>Select Country</option>
+              <option value="India">INDIA</option>
+              <option value="USA">USA</option>
+              <option value="China">CHINA</option>
+            </select>
+          </label>
+        </div>
+        <div>
+          <label>
+            Profile Picture :
+            <input type="file" name="profile_pic" />
+          </label>
+        </div>
+
+        <div>
+          <label> Date of Birth : <input type="date" name="dob" /> </label>
+        </div>
+
+        <div>
+          <label
+            >Phone :
+            <input type="tel" name="mobile_num" maxlength="10" minlength="10" />
+          </label>
+        </div>
+
+        <div>
+          <label
+            >Age :
+            <input type="number" name="age" min="18" max="25" />
+          </label>
+        </div>
+
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+      </form>
+    </div>
+  </body>
+</html>
